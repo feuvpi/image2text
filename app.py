@@ -38,7 +38,7 @@ with st.sidebar:
     )
 
     st.title("About:")
-    st.write("Hi, this simple AI app that converts any image input to text output!.")
+    st.write("Hi, this is a simple AI app that converts any image input to text output!.")
 
     # Adicione o botão "Donate" na barra lateral com link para "Buy Me a Coffee"
     st.markdown(
