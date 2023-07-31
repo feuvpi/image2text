@@ -38,19 +38,15 @@ with st.sidebar:
     )
 
     st.title("About:")
-    st.write("Hi, this is a simple AI app that converts any image input to text output!.")
+    st.write(
+        "Hi, this is a simple [AI](https://huggingface.co/Salesforce/blip-image-captioning-base) app that converts any image input to text output!."
+    )
 
     # Adicione o botão "Donate" na barra lateral com link para "Buy Me a Coffee"
     st.markdown(
         '<div class="centered-button"><a href="https://www.buymeacoffee.com/fredvpgi" target="_blank"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Donate-yellow.svg"></a></div>',
         unsafe_allow_html=True,
     )
-
-
-# Use st.sidebar para criar a barra lateral
-
-
-# st.write("Upload a image and receive text as output!")
 
 # Opção para fazer o upload da imagem
 uploaded_file = st.file_uploader("Upload an image ;)", type=["jpg", "png", "jpeg"])
