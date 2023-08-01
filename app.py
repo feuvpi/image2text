@@ -66,8 +66,10 @@ if uploaded_file is not None:
     # Converte o objeto de arquivo do Streamlit em uma imagem PIL
     image = Image.open(uploaded_file)
 
-    # Chama a função image2text para converter a imagem em texto
-    result = image2text(image)
+    # Adiciona um spinner para mostrar que o processamento está ocorrendo
+    with st.spinner("Processing the image..."):
+        # Chama a função image2text para converter a imagem em texto
+        result = image2text(image)
 
     # Exibe o resultado do texto obtido da imagem
     if result and len(result) > 0:
