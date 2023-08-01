@@ -61,7 +61,7 @@ uploaded_file = st.file_uploader("Upload an image ;)", type=["jpg", "png", "jpeg
 # Verifica se o usuário fez o upload da imagem
 if uploaded_file is not None:
     # Exibe a imagem
-    st.image(uploaded_file, caption="Imagem enviada.", use_column_width=True)
+    st.image(uploaded_file, use_column_width=True)
 
     # Converte o objeto de arquivo do Streamlit em uma imagem PIL
     image = Image.open(uploaded_file)
@@ -73,7 +73,7 @@ if uploaded_file is not None:
 
     # Exibe o resultado do texto obtido da imagem
     if result and len(result) > 0:
-        st.subheader("Texto obtido da imagem:")
+        # st.subheader("Texto obtido da imagem:")
         text_box = st.text_area("", result, height=200)
         if st.button("Copy Text"):
             pyperclip.copy(result)
