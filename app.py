@@ -1,12 +1,13 @@
 from transformers import pipeline
-from dotenv import find_dotenv, load_dotenv
+
+# from dotenv import find_dotenv, load_dotenv
 import streamlit as st
 from PIL import Image
 
 # from io import BytesIO
 import pyperclip
 
-load_dotenv(find_dotenv())
+# load_dotenv(find_dotenv())
 
 
 # IMAGE-2-TEXT
