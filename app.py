@@ -46,9 +46,9 @@ with st.sidebar:
         unsafe_allow_html=True,
     )
 
-    st.title("About:")
+    st.title("About")
     st.write(
-        "Hi, this is a simple [AI](https://huggingface.co/Salesforce/blip-image-captioning-base) app that converts any image input to text output!."
+        "Hi, this is a simple [AI](https://huggingface.co/Salesforce/blip-image-captioning-base) app that generates text based on image input."
     )
 
     st.markdown(
@@ -78,6 +78,6 @@ if uploaded_file is not None:
         text_box = st.text_area("", result, height=200)
         if st.button("Copy Text"):
             pyperclip.copy(result)
-            st.success("Texto copiado para a área de transferência.")
+            st.success("Copied to clipboard!")
     else:
-        st.warning("Não foi possível obter o texto da imagem. Tente novamente.")
+        st.warning("We can't process the input image at this time, try again later.")
